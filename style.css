@@ -56,6 +56,8 @@ p {
     background-color: inherit;
 }
 
+
+
 .nav__burger-btn span {
     position: absolute;
     width: 30px;
@@ -63,6 +65,7 @@ p {
     background-color: black;
     left: 5px;
     z-index: 2;
+    transition: transform .5s, opacity .5s, background-color .5s;
 }
 
 .nav__burger-btn span:nth-child(1) {
@@ -71,6 +74,18 @@ p {
 
 .nav__burger-btn span:nth-child(3) {
     transform: translateY(10px);
+}
+
+.header.Open .nav__burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.Open .nav__burger-btn span:nth-child(2) {
+   opacity: 0;
+}
+
+.header.Open .nav__burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
 }
 
 .navigation__menu {
@@ -284,11 +299,11 @@ font-weight: 400;
 
 .navbar {
     display: block;
-    width: 350px;
+    width: 100%;
    position: absolute;
-   left: -350px;
+   left: -100%;
    top: 0;
-   background-color: #4facfe;
+   background-color: #c3cfe2ab;
    transition: transform .5s;
    
 }
